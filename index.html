@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>Job Portal</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+
+<header> Job Portal </header>
+
+<div class="container" id="jobList"></div>
+
+<script src="script.js"></script>
+
+<script>
+// Display job cards
+const jobList = document.getElementById("jobList");
+
+jobs.forEach(job => {
+    jobList.innerHTML += `
+        <div class="job-card">
+            <h2>${job.title}</h2>
+            <p><strong>Company:</strong> ${job.company}</p>
+            <p><strong>Location:</strong> ${job.location}</p>
+            <a class="btn" href="job.html?id=${job.id}">View Job</a>
+        </div>
+    `;
+});
+</script>
+
+</body>
+</html>
